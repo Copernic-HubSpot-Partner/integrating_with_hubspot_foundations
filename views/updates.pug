@@ -1,0 +1,18 @@
+doctype html
+html 
+  head 
+      title= `${title}`
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      link(rel="stylesheet", href="/css/style.css")
+      title Ajouter un objet personnalisé
+  body
+    h1 Ajouter un objet personnalisé
+    form(action="/update-cobj" method="POST")
+      label Nom :
+      input(type="text" name="nom" required)
+      label Description :
+      input(type="text" name="description")
+      label Catégorie :
+      input(type="text" name="category")
+      button(type="submit") Ajouter
+    a(href="/") Retour à la page d'accueil

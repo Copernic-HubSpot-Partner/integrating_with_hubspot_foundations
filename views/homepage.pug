@@ -1,17 +1,15 @@
 doctype html
-html
-  head
-    title HubSpot Custom Objects
-  body
-    h1 Liste des objets personnalisés
-    table
-      tr
-        th Nom
-        th Description
-        th Catégorie
-      each obj in objects
-        tr
-          td= obj.properties.name
-          td= obj.properties.description
-          td= obj.properties.category
-    a(href="/update-cobj") Ajouter un objet
+html 
+    head 
+        title HubSpot Custom Objects
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Objets Personnalisés
+        .cards 
+            each obj in objects
+                .card 
+                    h2.card__name #{obj.properties.nom}
+                    p.card__email #{obj.properties.description}
+                    p.card__email Catégorie : #{obj.properties.category}
+        a(href="/update-cobj") Ajouter un objet
