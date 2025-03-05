@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title HubSpot Custom Objects
+  body
+    h1 Liste des objets personnalisés
+    table
+      tr
+        th Nom
+        th Description
+        th Catégorie
+      each obj in objects
+        tr
+          td= obj.properties.name
+          td= obj.properties.description
+          td= obj.properties.category
+    a(href="/update-cobj") Ajouter un objet
